@@ -41,13 +41,12 @@ This solution is a Docker Compose configuration that automates the deployment of
     
     - Add your application containers to the `docker-compose.yml` under the `services` section. Here’s an example of how to define an application container:
         ```yaml
-        services:
           web:
             build: .
             expose:
               - "5000"
             volumes:
-              - ./application:/application
+              - .:/application
         ```
 
         This configuration builds your application from the current directory and exposes it on port 5000.
